@@ -163,7 +163,7 @@ $.scrollUp({
 	animationInSpeed: 200, // Animation in speed (ms)
 	animationOutSpeed: 200, // Animation out speed (ms)
 	scrollText: '<i class="fas fa-arrow-up"></i>', // Text for element
-	activeOverlay: '#fff', // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+	activeOverlay: '', // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 });
 
 // WOW active

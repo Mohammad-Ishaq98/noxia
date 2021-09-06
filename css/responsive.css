@@ -120,6 +120,7 @@
 .container {width:450px}
 .mean-container a.meanmenu-reveal {
   top: -41px;
+}
 .hero {
   min-height: 1025px;
   background-size: cover;
@@ -173,5 +174,6 @@
  }
  .testimonial .person_txt p {
   font-size: 20px;
+ }
 }
-}
+
