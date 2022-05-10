@@ -7,13 +7,25 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
+  .hero {
+    min-height: 725px;
+  }
   .hero .hero_row .hero_img img {
-    width: 400px;
+    width: 350px;
     margin-left: 0;
   }
   .noxia_hdr .topbar_area .cta_area span {
     color: #fff;
     margin-right: 10px;
+  }
+  .hero button.slick-arrow {
+    width: 36px;
+  }
+  .hero .slick-prev {
+    left: 8px;
+  }
+  .hero .hero_row .hero_txt {
+    margin-left: 37px !important;
   }
 }
 
@@ -119,7 +131,7 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .container {width:450px}
 .mean-container a.meanmenu-reveal {
-  top: -41px;
+  top: 0px;
 }
 .hero {
   min-height: 1025px;

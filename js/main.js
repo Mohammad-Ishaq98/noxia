@@ -2,8 +2,8 @@
 "use strict";
 
 // meanmenu
-$('.main_menu nav').meanmenu({
-	meanMenuContainer: '.main_menu',
+$('#main-menu').meanmenu({
+	meanMenuContainer: '.main-menu',
 	meanScreenWidth: "992"
 });
 jQuery('main_menu na').superfish();
@@ -22,6 +22,7 @@ $('.slider_active').slick({
 	dots: true,
 	arrows:false,
 });
+
 $(window).on('scroll', function () {
 	var scroll = $(window).scrollTop();
 	if (scroll < 245) {
@@ -74,6 +75,8 @@ function mainSlider() {
 	}
 }
 mainSlider();
+
+
 //data background
 $("[data-background]").each(function(){
 	$(this).css("background-image", "url(" + $(this).attr("data-background") + ")");
@@ -126,26 +129,43 @@ $('.popup-image').magnificPopup({
 
 
 // isotop
-$('.grid').imagesLoaded( function() {
-	// init Isotope
-	var $grid = $('.grid').isotope({
-	  itemSelector: '.grid-item',
-	  percentPosition: true,
-	  masonry: {
-		// use outer width of grid-sizer for columnWidth
-		columnWidth: '.grid-item',
-	  }
+// $('.grid').imagesLoaded( function() {
+//   // filter items on button click
+// 	$('.').on( 'click', 'button', function() {
+// 		var filterValue = $(this).attr('data-filter');
+// 		$grid.isotope({ filter: filterValue });
+// 	});
+
+// 	// init Isotope
+// 	var $grid = $('.grid').isotope({
+// 	  itemSelector: '.grid-item',
+// 	  percentPosition: true,
+// 	  masonry: {
+// 		// use outer width of grid-sizer for columnWidth
+// 		columnWidth: '.grid-item',
+// 	  }
+// 	});
+// });
+$('#container').imagesLoaded( function() {
+
+	$('.filter-button-group').on( 'click', 'button', function() {
+		var filterValue = $(this).attr('data-filter');
+		$grid.isotope({ filter: filterValue });
 	});
+
+  var $grid = $('.grid').isotope({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		masonry: {
+			// use outer width of grid-sizer for columnWidth
+			columnWidth: '.grid-item'
+		}
+	})
 });
 
-// filter items on button click
-$('.portfolio-menu').on( 'click', 'button', function() {
-  var filterValue = $(this).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
 
 //for menu active class
-$('.portfolio-menu button').on('click', function(event) {
+$('').on('click', function(event) {
 	$(this).siblings('.active').removeClass('active');
 	$(this).addClass('active');
 	event.preventDefault();
